@@ -14,8 +14,9 @@
         "noImplicitAny": false,
         "removeComments": false,
         "sourceMap": true,
+        "inlineSources": true,
         "declaration": true,
-        "target": "es5",
+        "target": "es2015",
         "outDir": "dist",
         "rootDir": ".",
         "skipLibCheck": true,
@@ -24,21 +25,13 @@
     "exclude": [
         "node_modules",
         "demo",
-        "index.d.ts",
         "dist",
         "**/*.ngfactory.ts"
     ],
-    "awesomeTypescriptLoaderOptions": {
-        "resolveGlobs": true,
-        "forkChecker": true
-    },
-    "filesGlob": [
-        "!./node_modules/**",
-        "typings/browser.d.ts"
-    ],
-    "types": [
-        "node",
-        "clipboard"
+    "files": [
+        "./index.ts",
+        "public_api.ts",
+        "node_modules/zone.js/dist/zone.js.d.ts"
     ],
     "typeRoots": [
         "node_modules/@types"
@@ -46,6 +39,8 @@
     "angularCompilerOptions": {
         "skipTemplateCodegen": true,
         "strictMetadataEmit": true,
-        "annotateForClosureCompiler": true
+        "annotateForClosureCompiler": true,
+        "flatModuleOutFile": "index.js",
+        "flatModuleId": "ngx-clipboard"
     }
 }

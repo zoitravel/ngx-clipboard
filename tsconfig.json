@@ -17,9 +17,7 @@
         "sourceMap": true,
         "declaration": true,
         "target": "es5",
-        "declarationDir": "./dist",
-        "outDir": "./dist",
-        "rootDir": "./src",
+        "rootDir": ".",
         "skipLibCheck": true,
         "suppressImplicitAnyIndexErrors": false
     },
@@ -34,10 +32,6 @@
         "resolveGlobs": true,
         "forkChecker": true
     },
-    "filesGlob": [
-        "!./node_modules/**",
-        "typings/browser.d.ts"
-    ],
     "types": [
         "node",
         "clipboard"
