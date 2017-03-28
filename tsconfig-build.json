@@ -30,7 +30,6 @@
     ],
     "files": [
         "./index.ts",
-        "public_api.ts",
         "node_modules/zone.js/dist/zone.js.d.ts"
     ],
     "typeRoots": [
