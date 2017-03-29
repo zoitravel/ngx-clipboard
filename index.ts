@@ -1,1 +1,1 @@
-export { ClipboardModule, ClipboardDirective } from './src/index';
+export * from './public_api';
