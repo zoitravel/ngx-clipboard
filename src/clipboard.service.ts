@@ -1,7 +1,6 @@
-import { Inject, InjectionToken, Injectable, Optional, Renderer, SkipSelf } from '@angular/core';
+import { Inject, Injectable, InjectionToken, Optional, Renderer, SkipSelf } from '@angular/core';
 import { DOCUMENT } from '@angular/platform-browser';
 import { WINDOW } from "ngx-window-token";
-
 
 @Injectable()
 export class ClipboardService {
@@ -104,7 +103,11 @@ export function CLIPBOARD_SERVICE_PROVIDER_FACTORY(doc: Document, win: Window, p
 };
 
 export const CLIPBOARD_SERVICE_PROVIDER = {
+    deps: [
+        DOCUMENT as InjectionToken<Document>,
+        WINDOW as InjectionToken<Window>,
+        [new Optional(), new SkipSelf(), ClipboardService]
+    ],
     provide: ClipboardService,
-    deps: [DOCUMENT, WINDOW, [new Optional(), new SkipSelf(), ClipboardService]],
     useFactory: CLIPBOARD_SERVICE_PROVIDER_FACTORY
 };

@@ -21,7 +21,8 @@
         "outDir": "./dist",
         "rootDir": ".",
         "skipLibCheck": true,
-        "suppressImplicitAnyIndexErrors": false
+        "suppressImplicitAnyIndexErrors": false,
+        "noUnusedLocals": true
     },
     "exclude": [
         "node_modules",
